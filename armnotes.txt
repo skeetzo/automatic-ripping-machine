@@ -1,0 +1,132 @@
+right now ARM uses a bunch of APIs to search for track info
+
+i want to enter the basic title / artist on the music cd and i want it to find whatever that is
+
+so this only affects music cds
+
+so i want to launch firefox, search wiki, and verify top down links for the correct phrase
+
+so i want to prompt if i'm searching for an:
+: album -> search w/ "album" 
+: film -> search w/ "original motion picture soundtrack"
+
+urlString = title + modifier
+
+https://en.wikipedia.org/wiki/Special:Search?search=$urlString
+
+if the page doesn't have a 'Track Listing' section, then its useless
+
+then i can verify the page
+: album -> "is the __nth [words] album"
+: film -> "is the __nth [words] film"
+
+so grab the Track Listing and create a metadata.txt file
+- abcde rips the music to files
+- ffmpeg to add the metadata from the metadata.txt file
+
+so i need to add selenium and ffmpeg-*9999999999999999/88888888888888
+
+
+
+
+
+
+
+
+
+a cd is found as either a film or an album on wikipedia
+
+- album:
+: "is the third studio album"
+: "is the sixth studio album"
+: "is the first in the A Very Special Christmas series of Christmas-themed compilation albums"
+- film:
+: "is a 2007 American live action/computer animated musical comedy film"
+
+
+search google / wikipedia
+
+google: $albumname + "album"
+- first link should be wiki link
+- but just get first occurring wiki link
+wikipedia: $albumname + "(album)" or $albumname
+- if wiki search results, get first link
+- do search again without "(album)", compare result with 1st result in search for redundancy
+
+once wiki page has been located,
+## - find the main artist if exists in the link
+## CONFIRM the artist
+- verify it has a Track Listings section
+## - find the main artist if exists anywhere on page
+## CONFIRM the artist
+from the track listing section, scrape:
+- the versions
+from each version, scrape
+- No. / #, Title / Song Title, Writer(s), Version covered, Artist, Producer(s), Length / Time
+
+match the version by comparing the number of tracks on the cd to the number of tracks in each version
+CONFIRM success
+update the metadata
+
+if no versions match the number of tracks on the cd, then the wikipedia page is wrong
+repeat process for 2nd wiki link from google results, and so on
+
+
+or if motion picture soundtrack search: $albumname + "film"
+same process for wiki page for film w/ a Track Listings section
+
+###
+if the album was listed as having multiple sides it'll be off
+each side needs to be added cumulatively to manage the correct track number
+
+- US track listing
+  Side one
+  ...
+  Side two
+  ...
+
+###
+
+
+
+these results are useful if no results show up for a motion picture soundtrack:
+-----------------------------
+allmusic:
+Sample 		Title/Composer 	Performer 	Time 	Stream
+
+discogs:
+ Tracklist                  
+1 	–Starship (2) 	Wild Again
+					  Written-By – John Bettis, Michael Clark (3)		4:43
+
+
+
+
+spotify api sorta works as a method of finding motion picture soundtracks and their image
+
+search for: $album + "(Original Motion Picture Soundtrack)"
+ignore any results that don't match like "(Original Score from the Motion Picture)"
+
+search -> album id -> album -> track info
+- follow playlist
+- get album -> get album tracks
+- get image from album
+get album: artist, track name, track number, duration_ms
+search, get track: release_date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

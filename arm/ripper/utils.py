@@ -135,6 +135,164 @@ def move_files(basepath, filename, job, ismainfeature=False):
         logging.info("hasnicetitle is false.  Not moving files.")
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##########################################################################################################################
+
+
+def move_unknown_files(basepath, filename, job, ismainfeature=False):
+    """Move unknown files into final nonoverwriting media directory\n
+    basepath = path to source directory\n
+    filename = name of file to be moved\n
+    job = instance of Job class\n
+    ismainfeature = True/False"""
+
+    logging.debug("Moving files: " + str(job))
+
+    # get number of "Unknown Artist (n)" directories
+
+    m_path = os.path.join(job.config.MEDIA_DIR + "Unknown Artist")
+
+    if os.path.isdir(m_path):
+        m_path = "Unknown Artist ({})"
+        counter = 0
+        while os.path.isdir(os.path.join(m_path.format(counter))):
+            counter += 1
+        m_path = m_path.format(counter)
+
+        # logging.debug("Arguments: " + basepath + " : " + filename + " : " + str(hasnicetitle) + " : " + videotitle + " : " + str(ismainfeature))
+
+        # /home/arm/Music/flac/'Unknown Artist'/'Unknown Album'
+
+        m_path = os.path.join(job.config.MEDIA_DIR + videotitle)
+        
+        if not os.path.exists(m_path):
+            logging.info("Creating base title directory: " + m_path)
+            os.makedirs(m_path)
+
+        logging.info("Moving '" + filename + "' to " + m_path)
+
+        m_file = os.path.join(m_path, videotitle + "." + job.config.DEST_EXT)
+        if not os.path.isfile(m_file):
+            try:
+                shutil.move(os.path.join(basepath, filename), m_file)
+            except shutil.Error:
+                logging.error("Unable to move '" + filename + "' to " + m_path)
+        else:
+            logging.info("File: " + m_file + " already exists.  Not moving.")
+
+    else:
+        logging.info("Artist is not unknown.  Not moving files.")
+
+##########################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def rename_files(oldpath, job):
     """
     Rename a directory and its contents based on job class details\n
@@ -161,7 +319,7 @@ def rename_files(oldpath, job):
         shutil.move(oldpath, newpath)
         logging.debug("Directory name change successful")
     except shutil.Error:
-        logging.info("Error change directory from " + oldpath + " to " + newpath + ".  Likely the path already exists.")
+        logging.info("Error changing directory from " + oldpath + " to " + newpath + ".  Likely the path already exists.")
         raise OSError(2, 'No such file or directory', newpath)
 
     # try:
@@ -255,6 +413,209 @@ def find_file(filename, search_path):
         if filename in filenames:
             return True
     return False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##########################################################################################################################
+
+# call ffmpeg on each file to update it with the metadata.txt
+def update_music(job, logfile):
+    tracks = Track.query.get(job.job_id)
+    tracks = job.tracks.all()
+    for track in tracks:
+
+
+        # read generated metadata.txt file
+        newfilename = value from the metadata.txt file
+        track.new_filename = newfilename
+
+        # get other values from the metadata.txt file
+        # like title, artist, album
+
+        logging.info("Updating '" + track.filename)
+
+        try:
+            # generate file specific metadata.txt for input
+            # ffmpeg call on each track inputting the custom metadata.txt file
+            # rename each file by moving it to its newfilename
+
+            # ffmpeg -i in.mp4 -f ffmetadata in.txt
+            # ffmpeg -i in.mp4 -c copy -map_metadata 0 -map_metadata:s:v 0:s:v -map_metadata:s:a 0:s:a -f ffmetadata in.txt
+
+            logging.debug("File metadata update successful")
+        except shutil.Error:
+            logging.error("Unable to update '" + track.filename + "' to '" + newfilename + "'")
+            raise OSError(3, 'Unable to update file', newfilename)
+
+        track.filename = newfilename
+        db.session.commit()    
+
+
+
+# call the webscraper to generate a metadata.txt
+def search_music(job, logfile):
+    logging.info("beginning music search")
+    # take input from cli
+    title = input("Enter search title: ")# input from cli
+    if not title or str(title) == "": return False
+    w = Webscraper()
+    w.search_metadata(title)
+    logging.info("music search successful")
+
+    # search needs to create a metadata file for each track / file
+    
+
+# check the results of abcde at the final Unknown Artist place
+# or check 
+def check_metadata(job, logfile):
+    """
+    Update ripped music files using ffprobe and searched for metadata\n
+    job = job object\n
+    logfile = location of logfile\n
+
+    returns True/False for success/fail
+    """
+
+    if job.disctype == "music":
+        logging.info("Disc identified as music")
+
+        tracks = Track.query.get(job.job_id)
+        tracks = job.tracks.all()
+        ## need to figure out the right function to call instead of .all()
+        print(job.tracks)
+        # track = job.tracks.all()
+        track = tracks[0]
+        print(track.filename)
+
+        cmd = 'ffprobe "{0}" >> "{1}" 2>&1'.format(
+            ##
+            track.filename,
+            ##
+            logfile
+        )
+
+        logging.debug("Sending command: " + cmd)
+
+        try:
+            subprocess.check_output(
+                cmd,
+                shell=True
+            ).decode("utf-8")
+            logging.info("ffprobe call successful")
+
+            # i need to make the ffprobe call fail if there's multiple values of Unknown
+
+
+            return True
+        except subprocess.CalledProcessError as ab_error:
+            err = "Call to ffprobe failed with code: " + str(ab_error.returncode) + "(" + str(ab_error.output) + ")"
+            logging.error(err)
+
+    return False
+
+
+
+
+
+
+
+
+##########################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def rip_music(job, logfile):

@@ -1,0 +1,172 @@
+# get track
+
+{
+  "album": {
+    "album_type": "compilation",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+        },
+        "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+        "id": "0LyfQWJT6nXafLPZqxe9Of",
+        "name": "Various Artists",
+        "type": "artist",
+        "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL",
+      "AR",
+      "AT",
+      "AU",
+      "BA",
+      "BE",
+      "BG",
+      "BH",
+      "BO",
+      "BR",
+      "BY",
+      "CA",
+      "CH",
+      "CL",
+      "CO",
+      "CR",
+      "CY",
+      "CZ",
+      "DE",
+      "DK",
+      "DO",
+      "DZ",
+      "EC",
+      "EE",
+      "EG",
+      "ES",
+      "FI",
+      "FR",
+      "GB",
+      "GR",
+      "GT",
+      "HK",
+      "HN",
+      "HR",
+      "HU",
+      "ID",
+      "IE",
+      "IL",
+      "IN",
+      "IS",
+      "IT",
+      "JO",
+      "JP",
+      "KW",
+      "KZ",
+      "LB",
+      "LI",
+      "LT",
+      "LU",
+      "LV",
+      "MA",
+      "MC",
+      "MD",
+      "ME",
+      "MK",
+      "MT",
+      "MX",
+      "MY",
+      "NI",
+      "NL",
+      "NO",
+      "NZ",
+      "OM",
+      "PA",
+      "PE",
+      "PH",
+      "PL",
+      "PS",
+      "PT",
+      "PY",
+      "QA",
+      "RO",
+      "RS",
+      "RU",
+      "SA",
+      "SE",
+      "SG",
+      "SI",
+      "SK",
+      "SV",
+      "TH",
+      "TN",
+      "TR",
+      "TW",
+      "UA",
+      "US",
+      "UY",
+      "VN",
+      "XK",
+      "ZA"
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/2uJjVkgG9AjrmrAhYD9AjM"
+    },
+    "href": "https://api.spotify.com/v1/albums/2uJjVkgG9AjrmrAhYD9AjM",
+    "id": "2uJjVkgG9AjrmrAhYD9AjM",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2734b822fe92b7d4a8793392370",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e024b822fe92b7d4a8793392370",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048514b822fe92b7d4a8793392370",
+        "width": 64
+      }
+    ],
+    "name": "Cocktail (Original Motion Picture Soundtrack)",
+    "release_date": "1988-10-25",
+    "release_date_precision": "day",
+    "total_tracks": 10,
+    "type": "album",
+    "uri": "spotify:album:2uJjVkgG9AjrmrAhYD9AjM"
+  },
+  "artists": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0kObWap02DEg9EAJ3PBxzf"
+      },
+      "href": "https://api.spotify.com/v1/artists/0kObWap02DEg9EAJ3PBxzf",
+      "id": "0kObWap02DEg9EAJ3PBxzf",
+      "name": "Starship",
+      "type": "artist",
+      "uri": "spotify:artist:0kObWap02DEg9EAJ3PBxzf"
+    }
+  ],
+  "available_markets": [],
+  "disc_number": 1,
+  "duration_ms": 283400,
+  "explicit": false,
+  "external_ids": {
+    "isrc": "USRHD0530806"
+  },
+  "external_urls": {
+    "spotify": "https://open.spotify.com/track/3apTNIXWFwibQmkqWwx6vA"
+  },
+  "href": "https://api.spotify.com/v1/tracks/3apTNIXWFwibQmkqWwx6vA",
+  "id": "3apTNIXWFwibQmkqWwx6vA",
+  "is_local": false,
+  "name": "Wild Again (O.S.T.)",
+  "popularity": 0,
+  "preview_url": null,
+  "track_number": 1,
+  "type": "track",
+  "uri": "spotify:track:3apTNIXWFwibQmkqWwx6vA"
+}

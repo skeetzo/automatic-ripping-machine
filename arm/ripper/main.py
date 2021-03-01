@@ -338,8 +338,30 @@ def main(logfile, job):
         if utils.rip_music(job, logfile):
             utils.notify(job, "ARM notification", "Music CD: " + str(job.label) + " processing complete.")
             utils.scan_emby(job)
+
+######################################################################################################
+        if not utils.check_metadata(job, logfile):
+
+            if utils.search_music(job, logfile):
+                logging.info("Music search successful.")
+
+                if utils.update_music(job, logfile):
+                    logging.info("Music update successful.")
+                else:
+                    # can't just leave it all where it is as Unknown / Unknowns cause the next abcde will overwrite it
+                    # so instead just append the file count so its "Unknown Album (n)"
+                    utils.move_unknown_files(job, logfile)
+                    logging.info("Music update failed.  See previous errors.")
+
+            else:
+                utils.move_unknown_files(job, logfile)
+                logging.info("Music search failed.  See previous errors.")
+
+
         else:
             logging.info("Music rip failed.  See previous errors.  Exiting.")
+
+######################################################################################################
 
     elif job.disctype == "data":
         # get filesystem in order

@@ -1,0 +1,488 @@
+# get album tracks
+
+{
+  "href": "https://api.spotify.com/v1/albums/2uJjVkgG9AjrmrAhYD9AjM/tracks?offset=0&limit=20",
+  "items": [
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0kObWap02DEg9EAJ3PBxzf"
+          },
+          "href": "https://api.spotify.com/v1/artists/0kObWap02DEg9EAJ3PBxzf",
+          "id": "0kObWap02DEg9EAJ3PBxzf",
+          "name": "Starship",
+          "type": "artist",
+          "uri": "spotify:artist:0kObWap02DEg9EAJ3PBxzf"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 283400,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3apTNIXWFwibQmkqWwx6vA"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3apTNIXWFwibQmkqWwx6vA",
+      "id": "3apTNIXWFwibQmkqWwx6vA",
+      "is_local": false,
+      "name": "Wild Again (O.S.T.)",
+      "preview_url": null,
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:3apTNIXWFwibQmkqWwx6vA"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6zmLTiN3NBNCDECRbbJKkT"
+          },
+          "href": "https://api.spotify.com/v1/artists/6zmLTiN3NBNCDECRbbJKkT",
+          "id": "6zmLTiN3NBNCDECRbbJKkT",
+          "name": "The Fabulous Thunderbirds",
+          "type": "artist",
+          "uri": "spotify:artist:6zmLTiN3NBNCDECRbbJKkT"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 286053,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1F6LK9DoGXwirOS3RkrCVo"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1F6LK9DoGXwirOS3RkrCVo",
+      "id": "1F6LK9DoGXwirOS3RkrCVo",
+      "is_local": false,
+      "name": "Powerful Stuff (O.S.T.)",
+      "preview_url": null,
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:1F6LK9DoGXwirOS3RkrCVo"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4NkLjsRsFnuPu9B4zqzBqq"
+          },
+          "href": "https://api.spotify.com/v1/artists/4NkLjsRsFnuPu9B4zqzBqq",
+          "id": "4NkLjsRsFnuPu9B4zqzBqq",
+          "name": "Robbie Nevil",
+          "type": "artist",
+          "uri": "spotify:artist:4NkLjsRsFnuPu9B4zqzBqq"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 241000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4W2udQEOxnj6qtzqQUZ79E"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4W2udQEOxnj6qtzqQUZ79E",
+      "id": "4W2udQEOxnj6qtzqQUZ79E",
+      "is_local": false,
+      "name": "Since When (O.S.T.)",
+      "preview_url": null,
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:4W2udQEOxnj6qtzqQUZ79E"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2FjkZT851ez950cyPjeYid"
+          },
+          "href": "https://api.spotify.com/v1/artists/2FjkZT851ez950cyPjeYid",
+          "id": "2FjkZT851ez950cyPjeYid",
+          "name": "Bobby McFerrin",
+          "type": "artist",
+          "uri": "spotify:artist:2FjkZT851ez950cyPjeYid"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 286853,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1ngmt8WTzBqGjsE7Ks9FMO"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1ngmt8WTzBqGjsE7Ks9FMO",
+      "id": "1ngmt8WTzBqGjsE7Ks9FMO",
+      "is_local": false,
+      "name": "Don't Worry, Be Happy (O.S.T.)",
+      "preview_url": null,
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:1ngmt8WTzBqGjsE7Ks9FMO"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2hnzQ6eCFkxUIPsVcsdj8A"
+          },
+          "href": "https://api.spotify.com/v1/artists/2hnzQ6eCFkxUIPsVcsdj8A",
+          "id": "2hnzQ6eCFkxUIPsVcsdj8A",
+          "name": "The Georgia Satellites",
+          "type": "artist",
+          "uri": "spotify:artist:2hnzQ6eCFkxUIPsVcsdj8A"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL",
+        "AR",
+        "AT",
+        "AU",
+        "BA",
+        "BE",
+        "BG",
+        "BH",
+        "BO",
+        "BR",
+        "BY",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "DZ",
+        "EC",
+        "EE",
+        "EG",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HR",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IN",
+        "IS",
+        "IT",
+        "JO",
+        "JP",
+        "KW",
+        "KZ",
+        "LB",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MA",
+        "MC",
+        "MD",
+        "ME",
+        "MK",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PS",
+        "PT",
+        "PY",
+        "QA",
+        "RO",
+        "RS",
+        "RU",
+        "SA",
+        "SE",
+        "SG",
+        "SI",
+        "SK",
+        "SV",
+        "TH",
+        "TN",
+        "TR",
+        "TW",
+        "UA",
+        "US",
+        "UY",
+        "VN",
+        "XK",
+        "ZA"
+      ],
+      "disc_number": 1,
+      "duration_ms": 105880,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7rO8GtwhpUYahCyLE85aV9"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7rO8GtwhpUYahCyLE85aV9",
+      "id": "7rO8GtwhpUYahCyLE85aV9",
+      "is_local": false,
+      "name": "Hippy Hippy Shake",
+      "preview_url": "https://p.scdn.co/mp3-preview/34ca8720829a56df695e9f16349b9955784f06ee?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:7rO8GtwhpUYahCyLE85aV9"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
+          },
+          "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
+          "id": "3oDbviiivRWhXwIE8hxkVV",
+          "name": "The Beach Boys",
+          "type": "artist",
+          "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 216093,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3eKkcRtq7wW7VCv83OL2GG"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3eKkcRtq7wW7VCv83OL2GG",
+      "id": "3eKkcRtq7wW7VCv83OL2GG",
+      "is_local": false,
+      "name": "Kokomo - 1995 Remaster",
+      "preview_url": null,
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:3eKkcRtq7wW7VCv83OL2GG"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3lPQ2Fk5JOwGWAF3ORFCqH"
+          },
+          "href": "https://api.spotify.com/v1/artists/3lPQ2Fk5JOwGWAF3ORFCqH",
+          "id": "3lPQ2Fk5JOwGWAF3ORFCqH",
+          "name": "John Mellencamp",
+          "type": "artist",
+          "uri": "spotify:artist:3lPQ2Fk5JOwGWAF3ORFCqH"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 193146,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3ZK8VSOSJQZqDcqBaY5vdE"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3ZK8VSOSJQZqDcqBaY5vdE",
+      "id": "3ZK8VSOSJQZqDcqBaY5vdE",
+      "is_local": false,
+      "name": "Rave On (O.S.T.)",
+      "preview_url": null,
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:3ZK8VSOSJQZqDcqBaY5vdE"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1CPwHx5lgVxv0rfcp7UXLx"
+          },
+          "href": "https://api.spotify.com/v1/artists/1CPwHx5lgVxv0rfcp7UXLx",
+          "id": "1CPwHx5lgVxv0rfcp7UXLx",
+          "name": "Ry Cooder",
+          "type": "artist",
+          "uri": "spotify:artist:1CPwHx5lgVxv0rfcp7UXLx"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL",
+        "AR",
+        "AT",
+        "AU",
+        "BA",
+        "BE",
+        "BG",
+        "BH",
+        "BO",
+        "BR",
+        "BY",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "DZ",
+        "EC",
+        "EE",
+        "EG",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HR",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IN",
+        "IS",
+        "IT",
+        "JO",
+        "JP",
+        "KW",
+        "KZ",
+        "LB",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MA",
+        "MC",
+        "MD",
+        "ME",
+        "MK",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PS",
+        "PT",
+        "PY",
+        "QA",
+        "RO",
+        "RS",
+        "RU",
+        "SA",
+        "SE",
+        "SG",
+        "SI",
+        "SK",
+        "SV",
+        "TH",
+        "TN",
+        "TR",
+        "TW",
+        "UA",
+        "US",
+        "UY",
+        "VN",
+        "XK",
+        "ZA"
+      ],
+      "disc_number": 1,
+      "duration_ms": 210800,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7yrV5cG8wjaRP4pzdk2gFe"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7yrV5cG8wjaRP4pzdk2gFe",
+      "id": "7yrV5cG8wjaRP4pzdk2gFe",
+      "is_local": false,
+      "name": "All Shook Up",
+      "preview_url": "https://p.scdn.co/mp3-preview/a2412d98ddaa747ad5adb27beba75296654690e3?cid=774b29d4f13844c495f206cafdad9c86",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:7yrV5cG8wjaRP4pzdk2gFe"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1zXl6yfxpAwd7c3PdTYchA"
+          },
+          "href": "https://api.spotify.com/v1/artists/1zXl6yfxpAwd7c3PdTYchA",
+          "id": "1zXl6yfxpAwd7c3PdTYchA",
+          "name": "Preston Smith",
+          "type": "artist",
+          "uri": "spotify:artist:1zXl6yfxpAwd7c3PdTYchA"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 164693,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0cqA6x1bN3JtkYW3MuAXod"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0cqA6x1bN3JtkYW3MuAXod",
+      "id": "0cqA6x1bN3JtkYW3MuAXod",
+      "is_local": false,
+      "name": "Oh, I Love You So (O.S.T.)",
+      "preview_url": null,
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:0cqA6x1bN3JtkYW3MuAXod"
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4xls23Ye9WR9yy3yYMpAMm"
+          },
+          "href": "https://api.spotify.com/v1/artists/4xls23Ye9WR9yy3yYMpAMm",
+          "id": "4xls23Ye9WR9yy3yYMpAMm",
+          "name": "Little Richard",
+          "type": "artist",
+          "uri": "spotify:artist:4xls23Ye9WR9yy3yYMpAMm"
+        }
+      ],
+      "available_markets": [],
+      "disc_number": 1,
+      "duration_ms": 144426,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7I4fA2QlBV85SQgXXD4fk5"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7I4fA2QlBV85SQgXXD4fk5",
+      "id": "7I4fA2QlBV85SQgXXD4fk5",
+      "is_local": false,
+      "name": "Tutti Frutti (O.S.T.)",
+      "preview_url": null,
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:7I4fA2QlBV85SQgXXD4fk5"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 10
+}
